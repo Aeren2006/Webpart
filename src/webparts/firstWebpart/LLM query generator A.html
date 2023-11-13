@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Generator</title>
+</head>
+<body>
+<h1>How to Use the query generator:</h1>
+<ol>
+<li><strong>Describe the author</strong>: Are you an engineer, a business development manager, a marketing manager, or a general manager? Do not use words <b>I am</b>.</li> 
+ <label for="author"></label>
+    <input type="text" id="author" required minlength="1" maxlength="1000" size="200"/></br></br>
+
+<li><strong>Describe</strong>: who you work for, the company and its role </li> 
+ <label for="department"></label>
+    <input type="text" id="department" required minlength="1" maxlength="1000" size="200"/></br></br>
+
+<li><strong>Describe your audience</strong>: 
+    <label for="audience">Who are you writing for? Are they students, academics, engineers, HR managers, transport planners, the Engineering New Zealand Board, or your boss?</label>   
+	<input type="text" id="audience" name="name" required minlength="1" maxlength="1000" size="200" /></br></br></li>
+
+    <label for="agerange">What is their age range?</label>
+    <input type="text" id="agerange" /></br></br></li> 
+
+<li><strong>Describe the tone of your communication</strong>:</br>
+    <label for="tone">Select your tone:</label>
+    <select id="tone">
+	<option value="select">Select tone</option>
+        <option value="analytical">analytical</option>
+	<option value="technical">technical</option>
+        <option value="formal">formal</option>
+        <option value="professional">professional</option>
+        <option value="friendly">friendly</option>
+        <option value="humorous">humourous</option>
+        <option value="witty">witty</option>
+        <option value="lighthearted">lighthearted</option>
+    </select>
+</li></br>
+
+
+<li><strong>Select an Action</strong>: Choose an action from the dropdown menu that best represents the type of response you want from ChatGPT. The available actions include:</li>
+</ol>
+<ul>
+<li><strong>Create</strong>: Design a concept, solution, or approach.</li>
+<li><strong>Explain</strong>: Provide detailed information or clarification.</li>
+<li><strong>Analyze</strong>: Examine a subject closely and critically.</li>
+<li><strong>Compare</strong>: Assess similarities and differences.</li>
+<li><strong>Evaluate</strong>: Determine the significance or worth.</li>
+<li><strong>Predict</strong>: Forecast future trends or developments.</li>
+<li><strong>Recommend</strong>: Suggest a suitable course of action.</li>
+<li><strong>Debate</strong>: Discuss opposing viewpoints or arguments.</li>
+<li><strong>Write</strong>: Compose an essay, report, or summary.</li></br>
+    <label for="action">Select an action:</label>
+    <select id="action">
+	<option value="select">Select an action</option>
+        <option value="create">Create</option>
+        <option value="explain">Explain</option>
+        <option value="analyze">Analyze</option>
+        <option value="compare">Compare</option>
+        <option value="evaluate">Evaluate</option>
+        <option value="predict">Predict</option>
+        <option value="recommend">Recommend</option>
+        <option value="debate">Debate</option>
+        <option value="write">Write</option>
+    </select>
+</br>
+</ul>
+<ol start="6">
+
+<li><strong>Select a Focus</strong>: Based on the action you choose, the &ldquo;Focus&rdquo; dropdown menu will be populated with relevant focus options. Select a focus that best aligns with the specific aspect or angle you want the AI to concentrate on when responding to your prompt.  </br>
+<label for="focus">Select a focus:</label>
+    <select id="focus">
+        <!-- Focus options will be populated dynamically -->
+    </select>
+</br></br></li>
+
+<li><strong>What is your desired wordcount?</strong>: 
+    <label for="wordcount">Wordcount</label>
+    <input type="number" id="wordcount" /></br></br></li>
+
+<li><strong>Enter a Subject</strong>: Type the main subject of your prompt into the &ldquo;Subject&rdquo; input field. This should be a concise description of the topic you want ChatGPT to address.</br> For example: upcoming rule changes at Engineering New Zealand.</br>
+    <label for="subject">Enter a subject:</label>
+    <input type="text" id="subject" required minlength="1" maxlength="1000" size="200"/>
+</br></br></li>
+
+<li><strong>Enter your reason for writing this</strong>: Provide any additional context or requirements in the &ldquo;Context&rdquo; input field. This information will help guide the AI&rsquo;s response and ensure it addresses your specific needs. </br>
+For example: to modernise CPEng and increase trust in the brand by increasing the effectiveness of our reassessment, disciplinary, and complaints systems.
+    </br>
+    <label for="context">Enter the reason:</label>
+    <input type="text" id="context" required minlength="1" maxlength="1000" size="200"/>
+</br>
+</li>
+</br>
+<li><strong>Generate the Prompt</strong>: Click the &ldquo;Generate&rdquo; button to create a customized prompt based on your input. The generated prompt will appear in a  text area below the input fields.</li>
+</br>
+<li><strong>Review the Prompt</strong>: Carefully review the generated prompt to ensure it aligns with your intended query or topic. If necessary, adjust your input and click &ldquo;Generate&rdquo; again to create a new prompt.</li></br>
+<li><strong>Use the Prompt with ChatGPT</strong>: Copy the generated prompt and paste it into the ChatGPT input field. The AI will use your custom prompt to generate a response that addresses your specified action, focus, subject, and context.</li>
+</ol>
+
+
+    <button id="generate">Generate Prompt</button>
+</br></br>
+    <label for="prompt">Generated Prompt:</label></br>
+    <textarea id="prompt" rows="20" cols="100" readonly></textarea>
+
+    <!-- Include the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
